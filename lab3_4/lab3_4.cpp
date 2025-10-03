@@ -20,13 +20,14 @@ int main()
 	cout << "R = "; cin >> R;
 
 
-	if ( ( (- R) <= x && x <= R) && ((-R) <= y && y <= R) && (pow(x + R, 2) + pow(y - R, 2)) > R * R && (pow(x - R, 2) + pow(y + R, 2)) > R * R)
+	if ( ( (- R) <= x && x <= R) && ((-R) <= y && y <= R) // квадрат 
+		&& (pow(x + R, 2) + pow(y - R, 2)) > R * R  // верхнє коло
+		&& (pow(x - R, 2) + pow(y + R, 2)) > R * R) // нижнє коло
 
 		cout << "yes" << endl;
 
 	else
 		cout << "no" << endl;
-	
 
 	cin.get();
 	return 0;
